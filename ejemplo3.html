@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Milton Hernández">
+    <title>Ejemplo3</title>
+    <!-- se importa una hoja de estilo desde la etiqueta Style-->
+    <style type="text/css" media="screen">
+        @import '/styles/style1.css';
+    </style>
+</head>
+<body>
+    <header><h1>Importar CSS desde la etiqueta style.</h1></header>
+    <main>
+        <section>
+            <article>
+                <header><h2>Forma altenativa de incluir un archivo externo.</h2></header>
+                <p>En este caso, para incluir en la página HTML los estilos definidos en archivos CSS externos se utiliza una regla especial de tipo <strong>@import.</strong> Las reglas de tipo @import siempre preceden a cuaquier otra regla CSS(con la única excepción de la regla <strong>@charset</strong>).</p>
+                <p>La URL del archivo CSS externo se indica mediante una cadena de texto encerrada con <strong>comillas simples o dobles o mediante la palabra reservada url().</strong> De esta forma,las siguientes reglas @import son equivalentes:</p>
+                <p>
+                    <span>@import '/styles/style1.css'</span><br>
+                    <span>@import "/styles/style1.css"</span><br>
+                    <span>@import url('/styles/style1.css')</span><br>
+                    <span>@import url("/styles/style1.css")</span>
+                </p>
+            </article>
+            <article>
+                <header><h2>Icluir CSS en elementos HTML</h2></header>
+                <p>Este método para incluir estilos CSS en un documento HTML es el peor y el menos utilizado, ya que tiene los mismos problemas que la utilización de las etiquetas <strong>font.</strong></p>
+                <p style="color: brown; font-family: 'verdana';">Esta forma de incluir CSS directamente en los elementos HTML solamente se utiliza en determinadas situaciones en las que se debe incluir un estilo muy específico para un solo elemento concreto.</p>
+            </article>
+        </section>
+    </main>
+    <footer><p>Todos los derechos reservados &copy; 2021</p></footer>
+</body>
+</html>

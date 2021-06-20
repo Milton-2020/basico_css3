@@ -1,5 +1,7 @@
-p{
-    color: darkgreen;
+p {
     font-family: Verdana;
-    font-size: 30px;
+}
+
+p span{
+    color: forestgreen;
 }

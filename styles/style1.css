@@ -1,0 +1,11 @@
+p {
+    font-family: Verdana;
+    color: green;
+}
+p strong{
+    color: black;
+}
+p span{
+    color: coral;
+    font-family: Verdana;
+}
