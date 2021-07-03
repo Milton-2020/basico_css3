@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +10,19 @@
     <meta name="generator" content="Ejemplo CSS3">
     <meta name="description" content="ejemplo de CSS3">
     <title>Selectores</title>
+    <link rel="stylesheet" href="/styles/style.css" media="screen" type="text/css">
 </head>
+
 <body>
-    <header><h1>Selectores</h1></header>
+    <header>
+        <h1>Selectores</h1>
+    </header>
     <main>
         <section>
             <article>
-                <header><h2>Selector universal</h2></header>
+                <header>
+                    <h2>Selector universal</h2>
+                </header>
                 <p>Se utiliza para seleccionar todos los elementos de una página.</p>
                 <p>Ejemplo:</p>
                 <pre> 
@@ -28,7 +35,9 @@
                 </pre>
             </article>
             <article>
-                <header><h2>Selector de tipo o etiqueta</h2></header>
+                <header>
+                    <h2>Selector de tipo o etiqueta</h2>
+                </header>
                 <p>Selecciona todo los elementos de la página cuyo etiqueta HTML coincide con el valor del selector.</p>
                 <p>Ejemplo selecionando mediante la etiqueta p:</p>
                 <pre>
@@ -65,19 +74,87 @@
                 </pre>
             </article>
             <article>
-                <header><h2>Selecetores descendente.</h2></header>
-                <p>Los selectores decendentes siempre estan formados por dos martes o mas partes separadas entres sí por  espacios en blanco.La última parte indica el elemento sobre el que se aplican los estilos y todas las partes anteriores indica el lugar en el que se tiene que encontrar ese elemento par que los estilos se apliquen realmente.</p>
+                <header>
+                    <h2>Selecetores descendente.</h2>
+                </header>
+                <p>Los selectores decendentes siempre estan formados por dos partes o mas partes separadas entres sí por espacios en blanco.La última parte indica el elemento sobre el que se aplican los estilos y todas las partes anteriores indica el lugar
+                    en el que se tiene que encontrar ese elemento par que los estilos se apliquen realmente.</p>
                 <p>El selector del siguiente ejemplo selecciona todos los elementos <strong>span</strong> de la página que se encuentra dentro de un elemento <strong>p.</strong></p>
                 <pre>
                     <code>
                         p span{
                             color: red;
                         }
+                        h3 span{
+                            color: red;
+                        }
                     </code>
                 </pre>
             </article>
+            <article>
+                <header>
+                    <h2>Resultado del ejemplo</h2>
+                </header>
+                <p>Este es un ejemplo de <span>Prueba</span></p>
+                <h3>este es <span>otro ejemplo</span> de prueba</h3>
+                <p><strong>Nota: </strong>No confundir el selector decendente con la combinación de selectores</p>
+                <p class="nota">Combinación de selectores.</p>
+                <p>El estilo se aplica a todos los elementos (p, a, span, em).</p>
+                <pre>
+                    <code>
+                        p, a, span, em{
+                            text-decoration: underline;
+                        }
+                    </code>
+                </pre>
+                <p class="nota">Selector decendente.</p>
+                <p>El estilo se aplica solo alos elemtos <strong>em</strong> que se encuentren dentro de p a span</p>
+                <pre>
+                    <code>
+                        p a span em{
+                            text-decoration: underline;
+                        } 
+                    </code>
+                </pre>
+                <p>Si se emplea el selector decendete con el selctor universal se puede restingir el alcanse de un selector decendente.</p>
+                <p>El siguiente ejemplo muestra los dos enlaces de color rojo.</p>
+                <pre>
+                    <code>
+                        p a{
+                            color: red;
+                        }
+                    </code>
+                </pre>
+                <p>Codigo HTML</p>
+                <pre>
+                    <code>
+                        &lt;p&gt;&lt;a href=""#&gt;Enlace1&lt;/a&gt;&lt;/p&gt;
+                        &lt;p&gt;&lt;span&gt;&lt;a href=""#&gt;Enlace2&lt;/a&gt;&lt;span&gt;&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>Sin embargo, en el siguiente ejemplo solamente el segundo enlace se muestra de color rojo.</p>
+                <pre>
+                    <code>
+                        p * a{
+                            color: red;
+                        }
+                    </code>
+                </pre>
+                <p>Codigo HTML</p>
+                <pre>
+                    <code>
+                        &lt;p&gt;&lt;a href=""#&gt;Enlace1&lt;/a&gt;&lt;/p&gt;
+                        &lt;p&gt;&lt;span&gt;&lt;a href=""#&gt;Enlace2&lt;/a&gt;&lt;span&gt;&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>La razon es que el selector <strong>p * a</strong> se traduce como todos los elementos de tipo &lt;a&gt; que se encuentre dentro de cualquier elemento que, a su vez, se encuentre dentro de un elemento de tipo &lt;p&gt;. Como el primer
+                    elemento &lt;a&gt; se encuentra directamente bajo un elemento &lt;p&gt;, no se cumple la condición del selector p * a.</p>
+            </article>
         </section>
     </main>
-    <footer><p>Todos los derechos reservados &copy; 2021</p></footer>
+    <footer>
+        <p>Todos los derechos reservados &copy; 2021</p>
+    </footer>
 </body>
+
 </html>

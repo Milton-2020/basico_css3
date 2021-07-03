@@ -1,7 +1,30 @@
+/*estilo general para la etiqueta code*/
+
+code {
+    font-size: x-large;
+}
+
+
+/*Este es un comentari en CSS*/
+
 p {
     font-family: Verdana;
 }
 
-p span{
-    color: forestgreen;
+
+/*estilo aplicado a ejemplo4.html*/
+
+p span {
+    color: red;
 }
+
+h3 span {
+    color: royalblue;
+}
+
+.nota {
+    color: rgb(206, 126, 36);
+}
+
+
+/**/
