@@ -27,4 +27,19 @@ h3 span {
 }
 
 
+/*Aplicando estilo en el atrivuto class con multiple valores*/
+.aviso{
+    font-size: 20px;
+}
+.especial{
+    color: blueviolet;
+}
+.ejemplo{
+    font-weight: bold;
+}
+/*Estilos con ejemplo del selector id*/
+#aviso{
+    color: blue;
+    font-weight: bold;
+}
 /**/

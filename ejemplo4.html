@@ -116,7 +116,7 @@
                         } 
                     </code>
                 </pre>
-                <p>Si se emplea el selector decendete con el selctor universal se puede restingir el alcanse de un selector decendente.</p>
+                <p>Si se emplea el selector decendete con el selector universal se puede restingir el alcanse de un selector decendente.</p>
                 <p>El siguiente ejemplo muestra los dos enlaces de color rojo.</p>
                 <pre>
                     <code>
@@ -149,6 +149,207 @@
                 </pre>
                 <p>La razon es que el selector <strong>p * a</strong> se traduce como todos los elementos de tipo &lt;a&gt; que se encuentre dentro de cualquier elemento que, a su vez, se encuentre dentro de un elemento de tipo &lt;p&gt;. Como el primer
                     elemento &lt;a&gt; se encuentra directamente bajo un elemento &lt;p&gt;, no se cumple la condición del selector p * a.</p>
+            </article>
+            <article>
+                <header><h2>Selector de clase.</h2></header>
+                <p>Una de las soluciones más senciallas para aplicar estilos a un solo elemento de la página consiste en utiliza el atributo <strong>class</strong> de HTML dobre ese elemento para indicar directamente la regla CSS que se le deve aplicar.</p>
+                <p>Principal característica de este selector es que en una misma página HTML varios elementos diferentes pueden utilizar el mismo valor en el atributo class.</p>
+                <p>Codigo HTML</p>
+                <pre>
+                    <code>
+                        &lt;body&gt;
+                            &lt;p class="ejemplo"&gt;Ejemplo con la etiqueta p y el atributo class.&lt;/p&gt;
+                            &lt;p&gt;Ejemplo sin el atributo class.&lt;/p&gt;
+                            &lt;p&gt;Otro ejemplo sin el atributo class.&lt;/p&gt;
+                        &lt;/body&gt;
+                    </code>
+                </pre>
+                <p>Para que el el navegador no confunda este selector con otros tipos de selectores, se prefija el valor del atributo class con un punto (.)</p>
+                <p>Selector de clase.</p>
+                <pre>
+                    <code>
+                        .ejemplo{
+                            color: red; 
+                        }
+                    </code>
+                </pre>
+                <p>El selector <strong>.ejemplo</strong> se interpreta com "Cualquier elemento de la página cuyo atributo class sea igual a ejemplo", por lo que solamente el primer párrafo cumple esa condición segun el ejemplo antes expuesto.</p>
+                <pre>
+                    <code>
+                        &lt;body&gt;
+                            &lt;p class="ejemplo"&gt;Ejemplo con la etiqueta p y el atributo class.&lt;/p&gt;
+                            &lt;p&gt;Ejemplo sin el atributo class en la etiqueta p.&lt;a class="ejemplo"&gt;pero si en la etiqueta a&lt;/a&gt;&lt;/p&gt;
+                            &lt;p&gt;Otro ejemplo sin el atributo class en la etiqueta p. &lt;em class="ejemplo"&gt;pero si en la etiqueta em&lt;/em&gt;&lt;/p&gt;
+                        &lt;/body&gt;
+                    </code>
+                </pre>
+                <p>¿Cómo es posible aplicar estilos solamente al párrafo cuyo atributo class sea igual a ejemplo? Combinando el selector de tipo y el selectro de classe, se obtiene un selector mucho más específico</p>
+                <p>Ejemplo:</p>
+                <pre>
+                    <code>
+                        p.ejemplo{
+                            color: red;
+                        }
+                    </code>
+                </pre>
+                <p>EL selector p.ejemplo se interpreta como "aquellos elementos de tipo &lt;p&gt; que dispongan de un atributo class con el valor ejemplo".</p>
+                <p><strong>Nota:</strong> no debe confundirse el selector de clase con los selectores anteriores.</p>
+                <p>Todos los elementos de tipo "p" con el atributo class="aviso".</p>
+                <pre>
+                    <code>
+                        p.aviso{
+                            color: red;
+                        }
+                    </code>
+                </pre>
+                <p>Todos los elementos con el atributo class="aviso" que estén dentro de cualquier elemento de tipo "p".</p>
+                <pre>
+                    <code>
+                        p .aviso{
+                            color: red;
+                        }
+                    </code>
+                </pre>
+                <p>Código HTML.</p>
+                <pre>
+                    <code>
+                        &lt;p&gt;este es un ejemplo&lt;a class="aviso"&gt;&lt;/a&gt;el el atributo class&lt;/p&gt;
+                        &lt;p&gt;este es un ejemplo&lt;em class="aviso"&gt;con el atributo class&lt;/em&gt;&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>Todos los elementos "p" de la página y todos los elementos con atributo calss="aviso" de la página.</p>
+                <pre>
+                    <code>
+                        p, .aviso{
+                            color: red;
+                        }
+                    </code>
+                </pre>
+                <p>Por último, es posible aplicar los estilos de varias clases CSS sobre un mismo elemento. La sintaxis es similar, pero los diferentes valores del atributo class se separan con espacios en blanco.</p>
+                <p>Código HTML</p>
+                <pre>
+                    <code>
+                        &lt;p class="especial ejemplo aviso"&gt;Párrafo de texto de ejemplo&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>Al párrafo anterior se le aplica los estilos definidos en las regals .especial, ejemplo y aviso.</p>
+                <pre>
+                    <code>
+                        .especial{
+                            color: red;
+                        }
+                        .ejemplo{
+                            font-weight: blod;
+                        }
+                        .aviso{
+                            font-size: 15px;
+                        }
+                    </code>
+                </pre>
+                <p>Al párrafo anterior se le aplica los estilos definidos en las reglas .especial, .ejemplo y .aviso, por lo que el siguiente ejemplo, el texto del párrafo se vería de color rojo, en negrita y con un tamaño de letra de 15 píxel</p>
+                <p class="especial aviso ejemplo">Este parrafo es de ejemplo aplicando lo ya antes mencionado.</p>
+                <p>Si un elemento dispone de un atributo class con más de un valor, es posible utilizar un selector más avanzado.</p>
+                <pre>
+                    <code>
+                        .especial{
+                            color: red;
+                        }
+                        .especial.ejemplo{
+                            color: blue;
+                        }
+                        .ejemplo{
+                            font-size: 15px;
+                        }
+                        .aviso{
+                            font-weight: bold;
+                        }
+                    </code>
+                </pre>
+                <p>en el ejemplo anterior el texto es de color azul y no rojo. El motivo es que se ha utilizar un selector de clase múltiple .especial.ejemplo, que se interpreta como "aquellos elementos de la página que dispongan de un atributo class con al menos los valores especial y ejemplo".</p>
+            </article>
+            <article>
+                <header><h2>Selector de ID.</h2></header>
+                <p>El selector de ID permite seleccionar un elementode la página a trevés del valor de su atributo id. Este tipo de selectores sólo selecciona un elemento de la página porque el valor del atributo id no se puede repetir en dos elementos diferentes de una misma página.</p>
+                <p>La sintaxis de los selectores de ID es muy parecida a la de los selectores de clase, salvo que se utiliza el simbolo numeral (#) en vez del punto (.).</p>
+                <pre>
+                    <code>
+                        #aviso{
+                            color: blue;
+                        }
+                    </code>
+                </pre>
+                <p>Código HTML:</p>
+                <pre>
+                    <code>
+                        &lt;p&gt;Primer párrafo.&lt;/p&gt;
+                        &lt;p id="aviso"&gt;Segundo párrafo.&lt;/p&gt;
+                        &lt;p&gt;Tercer párrafo.&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>Resultado del ejemplo anterior.</p>
+                <p>Primer párrafo.</p>
+                <p id="aviso">Segundo párrafo.</p>
+                <p>Tercer párrafo.</p>
+                <p>La pricipal diferencia entre este tipo de selector y el selector de clase tiene que ver con HTML y no con CSS. Como se sabe, en una página. el valor del atributo id debe ser único, de forma que dos elementos diferentes no pueden tener el mismo valor id. Sin embargo, el atributo class no es obligatorio que sea único, de forma que muchos elementos HTML diferenres pueden compartir el mismo valor para su atributo class.</p>
+                <p>De esta forma, la recomendación general es la de utilizar el selector de ID cuando se quiere aplicar un estilo a un solo elemento específico de la página y utiliza el selector de clase cuando se quiere aplicar un estilo a varios elementos diferentes de la página HTML.</p>
+                <p><strong>Nota: </strong>no debe confundirse el selector de ID con los selectores antes mencionados.</p>
+                <p>Todos los elemetos de tipo "p" con atributo id="aviso"</p>
+                <pre>
+                    <code>
+                        p#aviso{
+                            color: blue;
+                        }
+                    </code>
+                </pre>
+                <p>Todos los elementos con atributo id="aviso" que estén dentro de cualquier elemento de tipo "p".</p>
+                <pre>
+                    <code>
+                        p #aviso{
+                            color: blue;
+                        }
+                    </code>
+                </pre>
+                <p>Todos los elemetos "p" de la página y todos los elementos con atributo id="aviso" de la página</p>
+                <pre>
+                    <code>
+                        p, #aviso{
+                            color: blue;
+                        }
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <header><h2>Combinación de selectores básicos.</h2></header>
+                <p>Ejemplos habituales de combinación de selectores.</p>
+                <p>Solamente selecciona aquellos elementos con una clase="especial" que se encuentre dentro de cualquier elemento con una clase="aviso".</p>
+                <pre>
+                    <code>
+                        .aviso .especial{
+                            color: blue;
+                        }
+                    </code>
+                </pre>
+                <p>Ahora, el selector solamente seleccionara aquellos elementos de tipo &lt;span&gt; con un atributo class="especial" que estén dentro de cualquier elemento de tipo &lt;div&gt; que tenga un atributo class="aviso".</p>
+                <pre>
+                    <code>
+                        div.aviso span.especial{
+                            color: blue;
+                        }
+                    </code>
+                </pre>
+                <p>El selector hace referencia al enlace con un atributo id="inicio" que se encuentre dentro de un elemento de tipo &lt;li&gt; con un atributo class="destacado", que forma parte de una lista &lt;ul&gt; con un atributo id="menuPrincipal"</p>
+                <pre>
+                    <code>
+                        ul#menuPrincipal li.destacado a#inicio{
+                            color: blue;
+                        }
+                    </code>
+                </pre>
+                <a href="/ejemplos_selectores.html">Ejemplos de selectore.</a>
+            </article>
+            <article>
+                <header><h2>Selectores avanzados.</h2></header>
+
             </article>
         </section>
     </main>
