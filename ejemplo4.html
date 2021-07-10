@@ -349,7 +349,138 @@
             </article>
             <article>
                 <header><h2>Selectores avanzados.</h2></header>
-
+                <p>Utilizando solamente los selectores básicos de la sección anterior, es posible diseñar prácticamente cualquier página web. No obstante, CSS define otrod selectores más avanzados que permiten simplificar las hojas de estilo.
+                </p>
+                <p>Desafortunadamente, el navegador internet explorer 6 y sus verciones anteriores no soportan este tipo de selectores avanzados, por lo que su uso no era común hasta hace poco tiempo.</p>
+                <p><strong>Selectores hijos.</strong></p>
+                <p>Se trata de un selector similar al selector descendente, pero muy diferente en sus funcionamiento. Se utiliza para seleccionar un elemento que es hijo directo de otro elemento y se indica mediante el signo "mayor que" (>).</p>
+                <pre>
+                    <code>
+                        p > span {
+                            color: blue;
+                        }
+                    </code>
+                </pre>
+                <p>El codigo HTML al que se aplica es el siguiente.</p>
+                <pre>
+                    <code>
+                        &lt;p&gt;&lt;span&gt;Texto1&lt;/span&gt;&lt;/p&gt;
+                        &lt;p&gt;&lt;a href="#"&gt;&lt;span&gt;Texto2&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>En el ejemplo anterior, el selector <strong>p > span</strong> se interpreta como "cualquier elemento &lt;span&gt; que sea hijo directo de un elemento &lt;p&gt;", por lo que el primer elemento &lt;span&gt; cumple la condición del selector. Sin embargo, el segundo elemeto &lt;span&gt; no la cumple porque es descendiente pero no es hijo directo de un elemento &lt;p&gt;.</p>
+                <p><strong>Comparacion de selector decendente y selectro hijo.</strong></p>
+                <pre>
+                    <code>
+                        p a {
+                            color: red;
+                        }
+                        p > a {
+                            color: red;
+                        }
+                    </code>
+                </pre>
+                <p>Codigo HTMl</p>
+                <pre>
+                    <code>
+                        &lt;p&gt;&lt;a href="#"&gt;Enlaze1&lt;/a&gt;&lt;/p&gt;
+                        &lt;p&gt;&lt;span&gt;&lt;a href="#"&gt;Enlace2&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>El primer selector es de tipo desendente y por tanto se aplica a todos los elementos &lt;a&gt; que se encuentran dentro de elementos &lt;p&gt;. En este caso, los estilos de este selector se aplican a los dos enlaces.</p>
+                <p>Por otra parte, el selector de hijos obliga a que el elemento &lt;a&gt; sea hijo directo de un elemento &lt;p&gt;. Por lo tanto, los estilos del selector p > a no se aplican al segundo enlce del ejemplo anterior.</p>
+            </article>
+            <article>
+                <header><h2>Selector adyacente.</h2></header>
+                <p>El selecetore adyacente utiliza el signo +.</p>
+                <pre>
+                    <code>
+                        elemento1 + elemento2{
+                            color: blue;
+                        }
+                    </code>
+                </pre>
+                <p>La explicación del comportamiento de este selector no es sencilla, ya qu4e selcciona todos los elementos de tipo elemento2 que cumpla las dos siguientes condiciones:</p>
+                <p>elemento1 y elemento2 deben ser hermanos, por lo que su elemento padre debe ser el mismo.</p>
+                <p>elemento2 debe aparecer inmediatamente después de elemento1 en el código HTML de la página.</p>
+                <p>Ejemplo:</p>
+                <pre>
+                    <code>
+                        h1 + h2 {
+                            color: red
+                        }
+                    </code>
+                </pre>
+                <p>Código HTML</p>
+                <pre>
+                    <code>
+                        &lt;body&gt;
+                        &lt;h1&gt;Titlulo1&lt;/h1&gt;
+                        &lt;h2&gt;Subtítulo&lt;/h2&gt;
+                        ...
+                        &lt;h2&gt;Otro subtítulo&lt;/h2&gt;
+                        &lt;/body&gt;
+                    </code>
+                </pre>
+                <p>Los estilos del selector h1 + h2 se aplican al primer elemento &lt;h2&gt; de la página, pero no al segundo elemento.</p>
+                <p>El elemento padre de &lt;h1&gt; es &lt;body&gt;, el mismo padre que el de los dos elementos &lt;h2&gt;. Así, los dos elementos &lt;h2&gt; cumplen la primera condición del selector adyacente.</p>
+                <p>EL primer elemento &lt;h2&gt; aparece en el código HTML justo después del elemento &lt;h1&gt;, por lo que este elemento &lt;h2&gt; también cumple la segunda condicion del selector adyacente.</p>
+                <p>Por el contrario, el segundo elemento &lt;h2&gt; no aparece justo después del elemento &lt;h1&gt;, por lo que no cumple la segunda condición del selector adyacente y por tanto no se le aplica los estilos de h1 + h2.</p>
+            </article>
+            <article>
+                <header><h2>Selector de atributos.</h2></header>
+                <p>Selectores de atributos, que permiten seleccionar elementos HTML en función de sus atributos y/o valores de esos atributos.</p>
+                <p>Los cuatro tipos de slectores de atributos son:</p>
+                <p><Strong>[nombre_atributo]</Strong>, selecciona los elementos que tienen establecido el atributo llamado nombre_atributo, independiente de su valor.</p>
+                <p><strong>[nombr_atributo=valor]</strong>, selecciona los elementos que tienen establecido un atributo llamado nombr_atributo con un valor igual a valor.</p>
+                <p><strong>[nombre_atributo~=valor]</strong>, selecciona los elementos que tiene establecido un atributo llamado nombr_atributo y al menos uno de los valores del atributo es valor.</p>
+                <p><strong>[nombre_atributo|=valor]</strong>, selecciona los elementos que tiene establecido un atributo llamado nombr_atributo y cuyo valor es una serie de palabras separadas con guiones, pero que comienzan con un valor. Este tipo de selector sólo es útil para los atributos de tipo lang que indican el idioma del conttenido del elemento.</p>
+                <p>Ejemplo de los selectores:</p>
+                <p>Se muestra de color azul todos los enlaces que tengan un atributo "class", independientemente de su valor.</p>
+                <pre>
+                    <code>
+                        a[class]{
+                            color: blue;
+                        }
+                    </code>
+                </pre>
+                <p>Se muestra de color azul todos los enlaces que apunten al sitio "http://www.ejemplo.com"</p>
+                <pre>
+                    <code>
+                        a[href="http://ejemplo.com"] {
+                            color: blue;
+                        }
+                    </code>
+                </pre>
+                <p>Se muestra de color azul todos los enlaces que tengan un atributo "class" en el que al menos uno de sus valores sea "valor1"</p>
+                <pre>
+                    <code>
+                        a[class~="valor1"]{
+                            color: blue;
+                        }
+                    </code>
+                </pre>
+                <p>selecciona todos los elementos de la página cuyo atributo "lang" sea igual a "en", es decir, todos los elementos en inglés.</p>
+                <pre>
+                    <code>
+                        [lang="en"]{
+                            ...
+                        }
+                    </code>
+                </pre>
+                <p>Selecciona todos los elementos de la página cuyo atributo "lang" empiece por "es", es decir, "es", "es-ES", "es-AR", etc.</p>
+                <pre>
+                    <code>
+                        [lang|="es"]{
+                            color: red;
+                        }
+                    </code>
+                </pre>
+                <p>selcciona todos elementos de la página cuyo atributo "lang"</p>
+            </article>
+            <article>
+                <header><h2>Agrupación de reglas.</h2></header>
+                <p></p>
             </article>
         </section>
     </main>
