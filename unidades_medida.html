@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Miton Hernández">
+    <meta name="generator" content="Ejemplo con CSS">
+    <meta name="description" content="Ejmplo con html y css">
+    <meta name="keywords" content="p, main, font-size">
+    <title>Unidades de medida</title>
+</head>
+
+<body>
+    <header>
+        <h1>Unidades de medida</h1>
+    </header>
+    <main>
+        <p>Las medidas CSS se emplean, entre otras, para definir la altura, anchura y márgenes de los elementos y para establecer el tamaño de la letra del texto. Todas las medidas se indica como un valor numérico entero o decimal seguido de una de medida
+            (si espacios en blancos ente el número y la unidad)</p>
+        <p>CSS divide las unidades de medida en dos grupos absolutas y relativas.</p>
+        <p>Si el valor es 0, la unidad de medida es opcional. Si el valor es distinto de cero y no se indica ninguana unidad, la medida se ignora completamente. Algunas propiedades permiten definir valores negativos, aun que habitualmente sus valores son
+            positivos.
+        </p>
+        <section>
+            <article>
+                <header>
+                    <h2>Unidades relativas.</h2>
+                </header>
+                <p>Las unidades relativas son más flexibles que las unidades absolutas por que se adaptan más fácilmente a los diferentes medios. A continuacion se muestra la lista de unidades de medida relativas y la referencia que se toma para determinar
+                    su valor real.</p>
+                <ol>
+                    <li><strong>em</strong>, (no confundir con la etiqueta &lg;em&gt; de HTML) Aun que no es una definción exacta, el valor de un 1em se puede aproximar por la anchura de la letra "M".</li>
+                    <li><strong>ex</strong>, relativa respecto de la altura de la letra "x" (minuscula)</li>
+                    <li><strong>px</strong> (píxel), relativa respeto de la pantalla del usuario.</li>
+                </ol>
+                <p>Si se utiliza la tipografia de 12 puntos, 1em equivale a 12 puntos. El valor 1ex se puede aproximar por 0.5em.</p>
+                <p>En el siguiente ejemplo, se indica que el tamaño de la letra del texto de la página debe de ser el 90% del tamaño por defecto.</p>
+                <pre>
+                    <code>
+                        body{ font-size: 0.9;}
+                    </code>
+                </pre>
+                <p>Cuando el valor decimal de una medida es inferiro a 1, se puede omitir el 0 de la izquierda, por lo que el código anterior es equivalente al código siguiente:</p>
+                <pre>
+                    <code>
+                        body{ font-size: .9;}
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <header>
+                    <h2>Unidades absolutas.</h2>
+                </header>
+                <p>Las unidades absolutas definen la medida de forma completa, ya que sus valores reales no se calculan a partir de otros valores de referencia, sino que son directamente los valores indicados. A continuación se muestra la lista completa
+                    de unidades absolutas definidas por CSS y su significado.</p>
+                <ul>
+                    <li><strong>in</strong>, del ingles "inches", pulgadas(1 pulgada son 2.54 centímetros)</li>
+                    <li><strong>cm</strong>, centímetros.</li>
+                    <li><strong>mm</strong>, milímetros.</li>
+                    <li><strong>pt</strong>, puntos(un punto equivale a una pulgada/73, es decir, unos 0.35 milímetros)</li>
+                    <li><strong>pc</strong>, picas (1picas equivale a 12 puntos, es decir, unos 4.23 milímetros)</li>
+                </ul>
+                <p>A continuación se muestran ejemplos de utilización de unidades absolutas.</p>
+                <pre>
+                    <code>
+                        body{ margin: 0.5in;}
+                        h1{ line-height: 2cm;}
+                        p{ word-spacing: 4mm}
+                        a{ font-size: 12pt}
+                        span{ font-size: 1pc}
+                    </code>
+                </pre>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados &copy; 2021</p>
+    </footer>
+</body>
+
+</html>

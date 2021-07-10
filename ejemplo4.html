@@ -151,7 +151,9 @@
                     elemento &lt;a&gt; se encuentra directamente bajo un elemento &lt;p&gt;, no se cumple la condición del selector p * a.</p>
             </article>
             <article>
-                <header><h2>Selector de clase.</h2></header>
+                <header>
+                    <h2>Selector de clase.</h2>
+                </header>
                 <p>Una de las soluciones más senciallas para aplicar estilos a un solo elemento de la página consiste en utiliza el atributo <strong>class</strong> de HTML dobre ese elemento para indicar directamente la regla CSS que se le deve aplicar.</p>
                 <p>Principal característica de este selector es que en una misma página HTML varios elementos diferentes pueden utilizar el mismo valor en el atributo class.</p>
                 <p>Codigo HTML</p>
@@ -265,11 +267,15 @@
                         }
                     </code>
                 </pre>
-                <p>en el ejemplo anterior el texto es de color azul y no rojo. El motivo es que se ha utilizar un selector de clase múltiple .especial.ejemplo, que se interpreta como "aquellos elementos de la página que dispongan de un atributo class con al menos los valores especial y ejemplo".</p>
+                <p>en el ejemplo anterior el texto es de color azul y no rojo. El motivo es que se ha utilizar un selector de clase múltiple .especial.ejemplo, que se interpreta como "aquellos elementos de la página que dispongan de un atributo class con
+                    al menos los valores especial y ejemplo".</p>
             </article>
             <article>
-                <header><h2>Selector de ID.</h2></header>
-                <p>El selector de ID permite seleccionar un elementode la página a trevés del valor de su atributo id. Este tipo de selectores sólo selecciona un elemento de la página porque el valor del atributo id no se puede repetir en dos elementos diferentes de una misma página.</p>
+                <header>
+                    <h2>Selector de ID.</h2>
+                </header>
+                <p>El selector de ID permite seleccionar un elementode la página a trevés del valor de su atributo id. Este tipo de selectores sólo selecciona un elemento de la página porque el valor del atributo id no se puede repetir en dos elementos diferentes
+                    de una misma página.</p>
                 <p>La sintaxis de los selectores de ID es muy parecida a la de los selectores de clase, salvo que se utiliza el simbolo numeral (#) en vez del punto (.).</p>
                 <pre>
                     <code>
@@ -290,8 +296,10 @@
                 <p>Primer párrafo.</p>
                 <p id="aviso">Segundo párrafo.</p>
                 <p>Tercer párrafo.</p>
-                <p>La pricipal diferencia entre este tipo de selector y el selector de clase tiene que ver con HTML y no con CSS. Como se sabe, en una página. el valor del atributo id debe ser único, de forma que dos elementos diferentes no pueden tener el mismo valor id. Sin embargo, el atributo class no es obligatorio que sea único, de forma que muchos elementos HTML diferenres pueden compartir el mismo valor para su atributo class.</p>
-                <p>De esta forma, la recomendación general es la de utilizar el selector de ID cuando se quiere aplicar un estilo a un solo elemento específico de la página y utiliza el selector de clase cuando se quiere aplicar un estilo a varios elementos diferentes de la página HTML.</p>
+                <p>La pricipal diferencia entre este tipo de selector y el selector de clase tiene que ver con HTML y no con CSS. Como se sabe, en una página. el valor del atributo id debe ser único, de forma que dos elementos diferentes no pueden tener
+                    el mismo valor id. Sin embargo, el atributo class no es obligatorio que sea único, de forma que muchos elementos HTML diferenres pueden compartir el mismo valor para su atributo class.</p>
+                <p>De esta forma, la recomendación general es la de utilizar el selector de ID cuando se quiere aplicar un estilo a un solo elemento específico de la página y utiliza el selector de clase cuando se quiere aplicar un estilo a varios elementos
+                    diferentes de la página HTML.</p>
                 <p><strong>Nota: </strong>no debe confundirse el selector de ID con los selectores antes mencionados.</p>
                 <p>Todos los elemetos de tipo "p" con atributo id="aviso"</p>
                 <pre>
@@ -319,7 +327,9 @@
                 </pre>
             </article>
             <article>
-                <header><h2>Combinación de selectores básicos.</h2></header>
+                <header>
+                    <h2>Combinación de selectores básicos.</h2>
+                </header>
                 <p>Ejemplos habituales de combinación de selectores.</p>
                 <p>Solamente selecciona aquellos elementos con una clase="especial" que se encuentre dentro de cualquier elemento con una clase="aviso".</p>
                 <pre>
@@ -348,7 +358,9 @@
                 <a href="/ejemplos_selectores.html">Ejemplos de selectore.</a>
             </article>
             <article>
-                <header><h2>Selectores avanzados.</h2></header>
+                <header>
+                    <h2>Selectores avanzados.</h2>
+                </header>
                 <p>Utilizando solamente los selectores básicos de la sección anterior, es posible diseñar prácticamente cualquier página web. No obstante, CSS define otrod selectores más avanzados que permiten simplificar las hojas de estilo.
                 </p>
                 <p>Desafortunadamente, el navegador internet explorer 6 y sus verciones anteriores no soportan este tipo de selectores avanzados, por lo que su uso no era común hasta hace poco tiempo.</p>
@@ -368,7 +380,8 @@
                         &lt;p&gt;&lt;a href="#"&gt;&lt;span&gt;Texto2&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
                     </code>
                 </pre>
-                <p>En el ejemplo anterior, el selector <strong>p > span</strong> se interpreta como "cualquier elemento &lt;span&gt; que sea hijo directo de un elemento &lt;p&gt;", por lo que el primer elemento &lt;span&gt; cumple la condición del selector. Sin embargo, el segundo elemeto &lt;span&gt; no la cumple porque es descendiente pero no es hijo directo de un elemento &lt;p&gt;.</p>
+                <p>En el ejemplo anterior, el selector <strong>p > span</strong> se interpreta como "cualquier elemento &lt;span&gt; que sea hijo directo de un elemento &lt;p&gt;", por lo que el primer elemento &lt;span&gt; cumple la condición del selector.
+                    Sin embargo, el segundo elemeto &lt;span&gt; no la cumple porque es descendiente pero no es hijo directo de un elemento &lt;p&gt;.</p>
                 <p><strong>Comparacion de selector decendente y selectro hijo.</strong></p>
                 <pre>
                     <code>
@@ -391,7 +404,9 @@
                 <p>Por otra parte, el selector de hijos obliga a que el elemento &lt;a&gt; sea hijo directo de un elemento &lt;p&gt;. Por lo tanto, los estilos del selector p > a no se aplican al segundo enlce del ejemplo anterior.</p>
             </article>
             <article>
-                <header><h2>Selector adyacente.</h2></header>
+                <header>
+                    <h2>Selector adyacente.</h2>
+                </header>
                 <p>El selecetore adyacente utiliza el signo +.</p>
                 <pre>
                     <code>
@@ -428,13 +443,17 @@
                 <p>Por el contrario, el segundo elemento &lt;h2&gt; no aparece justo después del elemento &lt;h1&gt;, por lo que no cumple la segunda condición del selector adyacente y por tanto no se le aplica los estilos de h1 + h2.</p>
             </article>
             <article>
-                <header><h2>Selector de atributos.</h2></header>
+                <header>
+                    <h2>Selector de atributos.</h2>
+                </header>
                 <p>Selectores de atributos, que permiten seleccionar elementos HTML en función de sus atributos y/o valores de esos atributos.</p>
                 <p>Los cuatro tipos de slectores de atributos son:</p>
-                <p><Strong>[nombre_atributo]</Strong>, selecciona los elementos que tienen establecido el atributo llamado nombre_atributo, independiente de su valor.</p>
+                <p>
+                    <Strong>[nombre_atributo]</Strong>, selecciona los elementos que tienen establecido el atributo llamado nombre_atributo, independiente de su valor.</p>
                 <p><strong>[nombr_atributo=valor]</strong>, selecciona los elementos que tienen establecido un atributo llamado nombr_atributo con un valor igual a valor.</p>
                 <p><strong>[nombre_atributo~=valor]</strong>, selecciona los elementos que tiene establecido un atributo llamado nombr_atributo y al menos uno de los valores del atributo es valor.</p>
-                <p><strong>[nombre_atributo|=valor]</strong>, selecciona los elementos que tiene establecido un atributo llamado nombr_atributo y cuyo valor es una serie de palabras separadas con guiones, pero que comienzan con un valor. Este tipo de selector sólo es útil para los atributos de tipo lang que indican el idioma del conttenido del elemento.</p>
+                <p><strong>[nombre_atributo|=valor]</strong>, selecciona los elementos que tiene establecido un atributo llamado nombr_atributo y cuyo valor es una serie de palabras separadas con guiones, pero que comienzan con un valor. Este tipo de selector
+                    sólo es útil para los atributos de tipo lang que indican el idioma del conttenido del elemento.</p>
                 <p>Ejemplo de los selectores:</p>
                 <p>Se muestra de color azul todos los enlaces que tengan un atributo "class", independientemente de su valor.</p>
                 <pre>
@@ -479,8 +498,81 @@
                 <p>selcciona todos elementos de la página cuyo atributo "lang"</p>
             </article>
             <article>
-                <header><h2>Agrupación de reglas.</h2></header>
-                <p></p>
+                <header>
+                    <h2>Agrupación de reglas.</h2>
+                </header>
+                <p>Cuado el selector de dos o más reglas CSS es idéntico, se puede agrupar las declaraciones de las reglas para hacer la hojas de estilo más eficientes como se muestra en el siguiete ejemplo.</p>
+                <pre>
+                    <code>
+                        h1{
+                            color: red;
+                            font-size: 2em;
+                            font-family: Verdana;
+                        }
+                    </code>
+                </pre>
+                <p>De esta forma es mas fácil de modificar y mantener por parte de los diceñadores. Como CSS ignora los espacios en blanco y las nuevas líneas, también se puede agrupar las reglas de la siguiente forma.</p>
+                <pre>
+                    <code>
+                        h1{color: red; font-size: 2em; font-family: Verdana;}
+                    </code>
+                </pre>
+                <p>Si se quiere reducir el máximo el tamaño del archico CSS para mejorar ligeramente el tipo de carga de la página web, también es posible indicar las regalas de la siguiente forma.</p>
+                <pre>
+                    <code>
+                        h1{color:red;font-size:2em;font-family:Verdana;}
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <header>
+                    <h2>Herncia.</h2>
+                </header>
+                <p>Cuando se establece el valor de alguna propiedad en un elemeto, todos sus decendetes heredan inicialmente ese mismo valor(o estilo).</p>
+                <p>Si se indica por ejemplo un tipo de letra al elemento &lt;body&gt; de una página, todos los elementos de la página mostrarán ese tipo de letra, salvo se indique lo contrario.</p>
+                <p>Estilo CSS.</p>
+                <pre>
+                    <code>
+                        &lt;head&gt;
+                            &lt;style type="text/css"&gt;
+                                body{ font-family: Arial; color: black;}
+                                h1{ font-family: Verdana;}
+                                p{ color: red;}
+                            &lt;/style&gt;
+                        &lt;/head&gt;
+                    </code>
+                </pre>
+                <p>Código HTML.</p>
+                <pre>
+                    <code>
+                        &lt;body&gt;
+                        &lt;h1&gt;Titulo de la página.&lt;/h1&gt;
+                        &lt;p&gt;Párrafo de texto no muy largo.&lt;/p&gt;
+                        &lt;/body&gt;
+                    </code>
+                </pre>
+                <p><a href="/ejemplo_herencia.html">ejemplo.</a></p>
+                <p>En el ejmplo anteriro se indica que los elementos &lg;body&gt; tiene asignado un tipo de letra Arial y un color de letra negro. Asi todos los elementos de la página (salvo que se indique lo contrario) se muestra de color negro y con la
+                    fuente Arial.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Coliciones de estilo.</h2>
+                </header>
+                <p>En las hojas de estilo complejas, es habitual que varias reglas CSS se apliquen a un mismo elemento HTML. El problema de estas reglas múltiples es que se pueden dar colisiones como la del siguiente ejemplo</p>
+                <pre>
+                    <code>
+                        p{ color: red;}
+                        p{ color: blue;}
+                    </code>
+                </pre>
+                <p>Se describe a continuación el método genérico seguido por CSS para resolver las colisiones.</p>
+                <ol>
+                    <li>Determinar todas las declaraciones que se aplican al elemento para el medio CSS seleccionado.</li>
+                    <li>Ordenar las declaraciones según su origen (CSS de navegador, usuario o de diceñador) y su importancia (palabra clave !important).</li>
+                    <li>Ordenar la declaracion según lo específico que sea el selector. Cuanto más genérico es un selector, menos importancia tienen sus declaraciones.</li>
+                    <li>Si después de aplicar las normas anteriores existen dos o mas reglas con la misma propiedad, se aplica la que se indicó en último lugar.</li>
+                </ol>
             </article>
         </section>
     </main>
