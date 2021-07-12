@@ -31,7 +31,7 @@
                 <p>Las unidades relativas son más flexibles que las unidades absolutas por que se adaptan más fácilmente a los diferentes medios. A continuacion se muestra la lista de unidades de medida relativas y la referencia que se toma para determinar
                     su valor real.</p>
                 <ol>
-                    <li><strong>em</strong>, (no confundir con la etiqueta &lg;em&gt; de HTML) Aun que no es una definción exacta, el valor de un 1em se puede aproximar por la anchura de la letra "M".</li>
+                    <li><strong>em</strong>, (no confundir con la etiqueta &lt;em&gt; de HTML) Aun que no es una definción exacta, el valor de un 1em se puede aproximar por la anchura de la letra "M".</li>
                     <li><strong>ex</strong>, relativa respecto de la altura de la letra "x" (minuscula)</li>
                     <li><strong>px</strong> (píxel), relativa respeto de la pantalla del usuario.</li>
                 </ol>
@@ -72,6 +72,49 @@
                         span{ font-size: 1pc}
                     </code>
                 </pre>
+                <p>De todas las unidades absolutas, la única que se utiliza con cierta frecuencia es la de los puntos(pt). El motivo es que se trata de una unidad preferida para indicar el tamaño de letra de texto para los documentos que se vana a imprimir,
+                    es decir, para, el medio print de CSS.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Porsentajes.</h2>
+                </header>
+                <p>CSS define otra unidad relativa de medida basada en los porcentajes y siempre esta referenciado a otra medida.</p>
+                <p>Los porcentajes se pueden utilizar por ejemplo para establecer el valor del tamaño de letra de los elementos.</p>
+                <pre>
+                    <code>
+                        body{font-size: 1em;}
+                        h1{font-size: 200%;}
+                        H2{font-size: 150%;}
+                    </code>
+                </pre>
+                <p>Los tamaños establecidos para &lt;h1&gt; y &lt;h2&gt; mediante las reglas anteriores, son equivalentes a 2em y 1.5em respectivamente, por lo que es más habitual definirlos mediante em.</p>
+                <p>Los porcentajes tambien se utilizan para defienir la anchura de los elementos.</p>
+                <p>Regla CSS.</p>
+                <pre>
+                    <code>
+                        div#contenido{width: 600px;}
+                        div.principal{width: 80%;}
+                    </code>
+                </pre>
+                <p>Código HTML.</p>
+                <pre>
+                    <code>
+                        &lt;div id="contenido"&gt;
+                            &lt;div class="principal"&gt;
+                                .....
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    </code>
+                </pre>
+                <p>En el ejemplo anterior, la referencia del valor 80% es la anchura de elemento padre. Por lo tanto, el elemento &lt;div class="principal"&gt; tiene un ancho de 80% x 600px = 480px</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Recomendaciones.</h2>
+                </header>
+                <p>En general, se recomienda el uso de unidades relativas siempre que sea posible, ya que mejora la accesibilidad de la página y permite que los documentos se adapten fácilmente a cualquier medio y dispositivo.</p>
+                <p>Normalmente se utiliza píxel y porcentaje para definir el layout del documento(básicamente, la anchura de las columnas y elementos de las páginas.) y em y porcentaje para el tamaño de la letra de los textos.</p>
             </article>
         </section>
     </main>
