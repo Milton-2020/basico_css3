@@ -15,7 +15,42 @@
     </header>
     <main>
         <section>
-
+            <article>
+                <p>Los colores en CSS se pueden indicar de cinco formas diferentes: palabras clave, colores del sistema, RGB hexadecimal, RGB numérico y RGB porcentual. Aunque el método más habitual es el del RGB hexadecimal.</p>
+            </article>
+            <article>
+                <header><h2>palabras clave.</h2></header>
+                <p>CSS define 17 palabras clave para referirce a los colores básicos. Las palabras se corresponden con el nombre en inglés de cada color:</p>
+                <p>aqua, black, blue, fuchsia, gray, lime, moroon, navy, olive, orange, purple, red, silver, teal, white, yellow.</p>
+                <p>Aunque es una forma muy sencilla de referenciar a los colores básicos, este método prácticamente no se utiliza en las hojas de estilo de los sitios web reales, ya que se trata de una gama de colores muy limitada.</p>
+            </article>
+            <article>
+                <header><h2>RGB decimal.</h2></header>
+                <p>El modelo RGB consiste definir un color indicando la camtidad de color rojo, verde y azul que se deve de mezclar para obtener ese color.</p>
+                <p>Un color RGB se define usando sus tres componentes R(rojo), G(verde) y B(azul). Cada uno de los componentes puede tomar un valor entre 0 y 255.</p>
+                <p>Si todos los componentes toman un valor de 0 el color resultante es negro y si los componentes toman un valor de 255(valor maximo) el color resultante es blanco.</p>
+                <pre>
+                    <code>
+                        p{ color: rgb(71,98,176); }
+                    </code>
+                </pre>
+                <p>La sintaxis que se utiliza para indicar los colores es rgb() y entre paréntesis se indican los tres componentes RGB, en ese mismo orden y separados por comas.</p>
+                <p>Si se indica un valor menor que 0 para un componente, automáticamente se trasforma su valor en 0. Igualmente, si se indica un valor mayor que 255, se trasforma automáticamente su valor a 255.</p>
+            </article>
+            <article>
+                <header><h2>RGB porcentual.</h2></header>
+                <p>Otra forma de indicar las componentes RGB de un color es mediante un porcentaje. El funcionamiento y la sintaxis de este método es el mismo que el de RGB decimal. La única diferencia en este caso es que el valor de las componentes RGB puede tomar valores entre 0% y 100%. El mismo color del ejemplo anterior se puede representar de forma porcentual.</p>
+                <pre>
+                    <code>
+                        p{ color: rgb(27%, 38%, 69%); }
+                    </code>
+                </pre>
+                <p>Al igual que sucede con el RGB decimal, si se indica un valor inferior a 0%, se trasforma automáticamente en 0% y si se indica un valor superior a 100%, se trunca su valor a 100%.</p>
+            </article>
+            <article>
+                <header><h2>RGB hexadecimal.</h2></header>
+                <p>40</p>
+            </article>
         </section>
     </main>
     <footer>
