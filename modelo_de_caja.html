@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Milton Hernández">
+    <title>Modelo de caja</title>
+    <style>
+        tbody{border: tomato solid;}
+    </style>
+</head>
+<body>
+    <header><h1>Modelo de caja(Box model)</h1></header>
+    <main>
+        <section>
+            <article>
+                <header><h2>Componentes del modelo de caja.</h2></header>
+                <p>Las partes que componen cada caja y sus orden de visualización desde el punto de vista del usuario son las siguientes.</p>
+                <table id="tabla" border="2">
+                    <thead>
+                        <th>Componente</th>
+                        <th>Descripcion</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Conrenido (content)</th>
+                            <td>se trata del contenido HTML del elemento(las palabras de un párrafo, una imagen, texto de una lista de elemetos, etc).</td>
+                        </tr>
+                        <tr>
+                            <th>Relleno (padding)</th>
+                            <td>espacio libre opcional entre el contenido y el borde que lo encierra.</td>
+                        </tr>
+                        <tr>
+                            <th>Borde (border)</th>
+                            <td>Línea que encierra completamente el contenido y su relleno.</td>
+                        </tr>
+                        <tr>
+                            <th>Imagen de fondo (background image)</th>
+                            <td>imagen que se muestra por detrás del contenido y el espacia de relleno.</td>
+                        </tr>
+                        <tr>
+                            <th>Color de fondo (background color)</th>
+                            <td>color que se muestra por detrás del contenido y el espacio de relleno.</td>
+                        </tr>
+                        <tr>
+                            <th>Margen (margin)</th>
+                            <td>espacio libre entre la caja y las posibles cajas adyacentes.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <header><h2>Anchura y altura.</h2></header>
+                <p>La propiedades CSS que controlan la anchura de los elementos se denomina width</p>
+                <table border="2">
+                    <caption>Anchura.</caption>
+                    <thead>
+                        <th>width</th>
+                        <th>Anchura</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>&lt;medida&gt; | &lt;porcentaje&gt; | auto | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a </th>
+                            <td>Todos los elementos, salvo los elementos en línea que no sean imágenes, las filas de tablas y los grupos de las filas de la tabla.</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>auto</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece la anchura de un elemento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>La propiedad width no admite valores negativos y los valores en porcentaje se calculan a partir de la anchura de su elemento padre. EL valor inherit indica que la anchura del elemento se hereda de su elemento padre. EL valor auto, que es el que se utiliza si no se establece de forma explícita un valor a esta propiedad, indica que el navegador calcule automáticamente la anchura del elemento, teniendo en cuenta sus contenidos y el sitio disponible en la página.</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados &copy; 2021</p>
+    </footer>
+</body>
+</html>
