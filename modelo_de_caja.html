@@ -8,6 +8,7 @@
     <title>Modelo de caja</title>
     <style>
         tbody{border: tomato solid;}
+        #margen{margin-top: 1em; margin-left: 10em; margin-right: 2em;}
     </style>
 </head>
 <body>
@@ -79,6 +80,97 @@
                     </tbody>
                 </table>
                 <p>La propiedad width no admite valores negativos y los valores en porcentaje se calculan a partir de la anchura de su elemento padre. EL valor inherit indica que la anchura del elemento se hereda de su elemento padre. EL valor auto, que es el que se utiliza si no se establece de forma explícita un valor a esta propiedad, indica que el navegador calcule automáticamente la anchura del elemento, teniendo en cuenta sus contenidos y el sitio disponible en la página.</p>
+                <p>El sguiente ejemplo establece el valor de la anchura del elemento &lt;div&gt; lateral.</p>
+                <pre>
+                    <code>
+                        #lateral {width: 200px}
+                    </code>
+                </pre>
+                <p>Código HTML</p>
+                <pre>
+                    <code>
+                        &lt;div id="lateral"&gt;
+                        *****
+                        &lt;/div&gt;
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <header><h2>Altura.</h2></header>
+                <p>La propiedad CSS que controla la altura de los elementos se denomia height.</p>
+                <table border="2">
+                    <thead>
+                        <tr>
+                            <th>height</th>
+                            <th>Altura</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>&lt;medida&gt; | &lt;porcentaje&gt; | auto | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a </th>
+                            <td>Todos los elementos, salvo los elementos en línea que no sean imágenes, las columnas de tabla y los grupos de columnas de tabla.</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>auto</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece la altura de un elemento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Al igual que sucede con width, la propiedad height no admite valores negativos. Si se indica un porcentaje, se toma como referencia la altura del elemento padre. Si el elemento padre no tiene un altura definida explícitamente, se asigna el valor auto a la altura.</p>
+                <p>El valor inherit indica que la altura del elemento se hereda de su elemento padre. El valor auto, que es el que se utiliza si no se establece de forma explícita un valor a esta propiedad, indica que el navegador debe calcular automáticamente la altura del elemento, teniendo en cuenta sus contenidos y el sitio disponible en la página.</p>
+            </article>
+            <article>
+                <header><h2>Margen y relleno.</h2></header>
+                <p><strong>Margen: </strong> CSS define cuatro propiedades para controlar cada uno de los márgenes horizontales y verticales.</p>
+                <table border="2">
+                    <caption>Margen</caption>
+                    <thead>
+                        <tr>
+                            <th>margin-top <br> margin-ringht <br> margin-bottom <br> margin-left</th>
+                            
+                            <td>Margen superior <br> Margen derecho <br> Margen inferior <br> Margen izquierdo</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>&lt;medida&gt; | &lt;porcentaje&gt; | auto | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a</th>
+                            <td>Todos los elementos, salvo margin-top y margin-bottom que sólo se aplican a los elementos de bloque y a las imágenes.</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece cada uno de los márgenes horizontales y verticales de un elemento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Cada una de las propiedades establece la separación entre los bordes.</p>
+                <img id="margen" src="/image/magen.png" alt="Margenes">
+                <p>Las Unidades más utilizadas para indicar los márgenes de un elemento son los píxeles(cuando se requiere una precisión total), los em(para hacer diseños que mantengan las proporciones) y los porcentajes(para hacer diseños líquidos o fluidos).</p>
+                <a href="/ejemplo_con_margenes.html">Ejemplo con margenes.</a>
+                <p>Algunos diseñadores web utilizan la etiqueta &lt;blockquote&gt; para encerrar los contenidos de un párrafo que se quiere mostrar tabulado respecto al resto de contenido.</p>
+                <p>Los márgenes verticales (margin-top y margin-bottom) sólo se pueden aplicar a los elementos de bloque y las imágenes, mientras que los márgenes laterales (margin-left y margin-right) se puede aplicar a cualquier elemento.</p>
+                <p>Ademas de las cuatro propiedades que forman cada uno de los márgenes del elemento, CSS define un propiedad que permite establecer los cuatro márgenes de forma directa empleando una única propiedad. Este tipo de propiedades resumidas se denomina propiedades de tipo "shorthand" y CSS define varias propiedades de este tipo.</p>
+                <p>La propiedad que permite definir de forma simultanea los cuatro márgenes se denomina <strong>margin.</strong></p>
+                <p>La propiedad margin admite entre uno y cuatro valores, con el siguiente significado.</p>
+                <p>Si solo se indica un valor, todos los márgenes tienen ese valor.</p>
+                <p>Si se indica dos valores, el primer valor se asigna a los margen superior e inferior y el segundo se asigna a los márgenes izquierdo y dercho.</p>
+                <p>Si se indica tres valores, el primero se asigna al margen superior, el tercero se asigna al margen inferior y el segundo valor se asigna a los márgenes izquierdo y derech.</p>
+                <p>Si se indica los cuatro valores, el orden de asignación es: margen supeior, margen derecho, margen inferior y margen izquierdo.</p>
             </article>
         </section>
     </main>
