@@ -1,0 +1,50 @@
+#caja1 {
+    border: black solid;
+    width: 40%;
+    border-width: 5px;
+    text-align: right;
+    padding: 2%;
+    background: url("/image/color1.jpg") repeat-x;
+}
+
+a {
+    font-size: 1.2em;
+    color: black;
+    padding: 2%;
+}
+
+
+/*ejemplo con repeat-y*/
+
+#caja2 {
+    border: black solid;
+    width: 40%;
+    border-width: 5px;
+    text-align: right;
+    padding: 10%;
+    background: url("/image/color1.jpg") repeat-y;
+}
+
+
+/*ejemplo con repeat*/
+
+#caja3 {
+    border: black solid;
+    width: 40%;
+    border-width: 5px;
+    text-align: right;
+    padding: 10%;
+    background: url("/image/color1.jpg") repeat;
+}
+
+
+/*ejemplo con no-repeat*/
+
+#caja4 {
+    border: black solid;
+    width: 40%;
+    border-width: 1px;
+    text-align: right;
+    padding: 2%;
+    background: url("/image/color1.jpg") no-repeat;
+}

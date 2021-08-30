@@ -1,0 +1,19 @@
+#caja1 {
+    /*Con border-width definimos los cuatro border*/
+    border: mediumblue solid;
+    border-width: 10px;
+}
+
+#caja2 {
+    /*Aca definimos los 4 bordes*/
+    border: solid tomato;
+    border-top-width: 3px;
+    border-right-width: 1px;
+    border-bottom-width: 5px;
+    border-left-width: 7px;
+}
+
+#caja3 {
+    border: springgreen solid;
+    border-width: 2em 1em;
+}

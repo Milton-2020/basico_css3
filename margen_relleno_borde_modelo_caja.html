@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="">
+    <meta name="author" content="Milton Hernández">
+    <title>margen, relleno, bordes y modelo de caja</title>
+    <link rel="stylesheet" href="/styles/modelo_caja.css">
+</head>
+
+<body>
+    <header>
+        <h1>Uso de margen, relleno, bordes y modelo de caja</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <header>
+                    <h2>Calculo de anchura y altura final </h2>
+                </header>
+                <p>La anchura y la altura de un elemento no solamente se calcula teniendo en cuenta sus propiedades width y height. El margen, los rellenos y los bordes establecidos a un elemento determinar la anchura y la altura final.</p>
+                <p>Código de ejemplo</p>
+                <pre>
+                    <code>
+                        div{
+                            width: 300px;
+                            padding-left: 50px;
+                            padding-right: 50px;
+                            margin-left: 30px;
+                            margin-right: 30px;
+                            border: 10px solid black;
+                        }
+                    </code>
+                </pre>
+                <p>La anchura total no son los 300px indicados en la propiedad width, sino que se tiene en cuenta todos sus márgenes, rellenos, bordes.</p>
+                <figure>
+                    <figcaption>Imagen que resume todas las medidas del elemento.</figcaption>
+                    <img src="/image/medidaFinal.jpg" alt="anchura y altura final">
+                </figure>
+                <p>De esta forma, la anchura del elemento en pantalla sería igual a la suma de la anchura original, los margenes, los bordes y los rellenos.</p>
+                <p>30px + 10px + 50px + 300px + 50px + 10px + 30px = 480 píxel</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Modo de compatibilidad Interner explorer</h2>
+                </header>
+                <p>El mode de compatibilidad de la página se indica mediante la etiqueta &lt;meta&gt; con la propiedad <strong> X-UA-compatible </strong> y cuyo valor es el que utiliza Internet Exprorer 8 para determinar el modo que se utiliza.</p>
+                <pre>
+                    <code>
+                        &lt;!-- Modo IE5 (Internet Explorer 5) --&gt;
+                        &lt;Head&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=5"&gt;
+                        ...
+                        &lt;/Head&gt;
+
+                        &lt;!-- Modo IE7 (Internet Explorer 7) --&gt;
+                        &lt;Head&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=7"&gt;
+                        ...
+                        &lt;/Head&gt;
+
+                        &lt;!-- Modo IE8 (Internet Explorer 8) --&gt;
+                        &lt;Head&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=8"&gt;
+                        ...
+                        &lt;/Head&gt;
+
+                        &lt;!-- Emular el Modo IE7 (Internet Explorer 7) --&gt;
+                        &lt;Head&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7"&gt;
+                        ...
+                        &lt;/Head&gt;
+
+                        &lt;!-- Emular el Modo IE8 (Internet Explorer 8) --&gt;
+                        &lt;Head&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8"&gt;
+                        ...
+                        &lt;/Head&gt;
+
+                        &lt;!-- Modo límite --&gt;
+                        &lt;Head&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+                        ...
+                        &lt;/Head&gt;
+                    </code>
+                </pre>
+                <p>Este metodo es aplicable para paginas antiguas.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Fondos</h2>
+                </header>
+                <p>El ultimo elemento que froma el box model (modelo de caja) es el fondo de la caja del elemento. El fondo puede ser un color simple o una imagen. el fondo solamente es visible en el área ocupada por el contenido y su relleno(padding), ya
+                    que el color de los bordes(border) se controla direcetamente desde los bordes y la zonda de los márgenes siempres son trasparentes.</p>
+                <p>CSS define 5 propiedades para establecer el fondo de cada elemento <strong>(background-color, background-image, background-repeat, background-attachment, background-position)</strong> y otra propiedad de tipo "shorthand" <strong>(background)</strong>.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>background-color</th>
+                            <td>Color de fondo</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>&lt;color&gt; | trasparent | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a </th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>trasparent</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece un color de fondo para los elementos</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Ejemplo.</p>
+                <pre>
+                    <code>
+                        body{
+                            background-color: #F5F5F5;
+                        }
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <header>
+                    <h2>background-image</h2>
+                </header>
+                <p>En ocaciones es necesario crear un fondo mas complejo que un simple color. CCS permite mostrar una imagen como fondo de cualquier elemento.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>background-image</th>
+                            <td>imagen de fondo</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>&lt;utl&gt; | none | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a</th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>none</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece una imagen como fondo a todos los elementos</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><strong>Nota: </strong>Em CSS permite establcer de forma simultánea un color y una imagen de fondo. En este caso, la imagen se muestra adelante color.</p>
+                <p>Ejemplo de Código</p>
+                <pre>
+                    <code>
+                        body {
+                            background-image: url ("imagenes/fondos.png")
+                        }
+                    </code>
+                </pre>
+                <p>Suele habitual indicar un color de fondo siempre que se muestre una imagen de fondo. En caso que no se pueda mostrar o contenga error, el navegador mostrara el color indicado.</p>
+                <p>Si la imagen que se quiere mostrar es demaciado grande para el fodo del elemento, solamente se muestra la parte comprendida en el tamaño del elemento. Si la imagen es mas peqieña que el elemento, CSS la repite horizontalmente y verticalmente
+                    asta llenar el fondo del elemento.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>background-repeat</h2>
+                </header>
+                <p>En ocaciones, no es conveniente que la imagen se repita horizontal y verticalmente. Para ello, CSS introduce la propiedad background-repeat que permite controlar la forma de repetición de la imágenes de fondo.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>background-repeat</th>
+                            <td>repetición de la imagen de fondo</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>repeat | repeat-x | repeat-y | no-repeat | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a</th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>repeat</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Controla la forma en que se repite las imágenes de fondo</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>El valor repeat indica que la imagen se deve repetir en todas las direcciones por defecto y por tanto, es el comportamiento por defecto. El valor no-repeat muestra una sola imagen y no se repite en ninguna direscción. El valor repeat-x
+                    repite la imagen sólo horizontalmente y el valor repeat-y repite la imagen solo en vertical.</p>
+                <a href="/ejemplo_repeat.html">Ejemplos</a>
+                <p>Código de ejemplo.</p>
+                <pre>
+                    <code>
+                        div{
+                            background: url("/imgen/ds.png") repeat-x;
+                            width: 100%;
+                            text-aling: center;
+                        }
+                    </code>
+                </pre>
+                <p>Ademas de seleccionar el tipo de repetición de la imágenes de fondo, CSS permite controlar la posición de la imagen dentro del fondo del elemento mediante la propiedad <strong>bacground-position</strong></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>background-position</th>
+                            <td>posición de la imagen de fondo.</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>((&lt;porcentaje&gt; | &lt;medida&gt; | left | center | <br> tight) (&lt;porcentaje&gt; | &lt;medida&gt; | top |<br> center | bottom)?) | ((left | center | <br> right) || (top | center | bottom)) | <br> inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a</th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>0% 0%</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Controla la posición en la que se muestra la imagen en el <br> fondo del elemento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Si se indica dos porcetajes o dos medidas, el primero indica el desplazamiento horizontal y el segundo el desplazamiento vertical respecto del origen <strong>(situado en la esquina superior izquierda).</strong> Si solamente se indica un
+                    porcentaje o una medida, se considera horizotal y al desplazamiento vertical se le asigna automáticamente el valor de 50%.</p>
+                <p>Si el valor de la propiedad background-position se indica mediante dos porcentajes x%, y% el navagador coloca el punto (x%, y%) de la imagen de fondo en el punto (x%, y%) del elemento.</p>
+                <p>Las palabras claves permitidas son equivalentes a algunos porcentajes significativos: top = 0%, left = 0%, center = 50% bottom = 100%, right = 100%.</p>
+                <p>CSS permite mezclar porcentajes y palabras claves, como por ejemplo 50% 2cm, center 2cm, center 10%.</p>
+                <a href="/ejemplo_background_position.html">Ejemplos</a>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Todos los derechos reservados &copy; 2021</p>
+    </footer>
+</body>
+
+</html>

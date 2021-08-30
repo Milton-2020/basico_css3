@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Milton Hernández">
     <title>Modelo de caja</title>
-    <style>
-        tbody{border: tomato solid;}
-        #margen{margin-top: 1em; margin-left: 10em; margin-right: 2em;}
-    </style>
+    <link rel="stylesheet" href="/styles/modelo_caja.css">
 </head>
+
 <body>
-    <header><h1>Modelo de caja(Box model)</h1></header>
+    <header>
+        <h1>Modelo de caja(Box model)</h1>
+    </header>
     <main>
         <section>
             <article>
-                <header><h2>Componentes del modelo de caja.</h2></header>
+                <header>
+                    <h2>Componentes del modelo de caja.</h2>
+                </header>
                 <p>Las partes que componen cada caja y sus orden de visualización desde el punto de vista del usuario son las siguientes.</p>
-                <table id="tabla" border="2">
+                <table>
                     <thead>
                         <th>Componente</th>
                         <th>Descripcion</th>
@@ -52,9 +55,11 @@
                 </table>
             </article>
             <article>
-                <header><h2>Anchura y altura.</h2></header>
+                <header>
+                    <h2>Anchura y altura.</h2>
+                </header>
                 <p>La propiedades CSS que controlan la anchura de los elementos se denomina width</p>
-                <table border="2">
+                <table>
                     <caption>Anchura.</caption>
                     <thead>
                         <th>width</th>
@@ -79,7 +84,8 @@
                         </tr>
                     </tbody>
                 </table>
-                <p>La propiedad width no admite valores negativos y los valores en porcentaje se calculan a partir de la anchura de su elemento padre. EL valor inherit indica que la anchura del elemento se hereda de su elemento padre. EL valor auto, que es el que se utiliza si no se establece de forma explícita un valor a esta propiedad, indica que el navegador calcule automáticamente la anchura del elemento, teniendo en cuenta sus contenidos y el sitio disponible en la página.</p>
+                <p>La propiedad width no admite valores negativos y los valores en porcentaje se calculan a partir de la anchura de su elemento padre. EL valor inherit indica que la anchura del elemento se hereda de su elemento padre. EL valor auto, que
+                    es el que se utiliza si no se establece de forma explícita un valor a esta propiedad, indica que el navegador calcule automáticamente la anchura del elemento, teniendo en cuenta sus contenidos y el sitio disponible en la página.</p>
                 <p>El sguiente ejemplo establece el valor de la anchura del elemento &lt;div&gt; lateral.</p>
                 <pre>
                     <code>
@@ -96,9 +102,11 @@
                 </pre>
             </article>
             <article>
-                <header><h2>Altura.</h2></header>
+                <header>
+                    <h2>Altura.</h2>
+                </header>
                 <p>La propiedad CSS que controla la altura de los elementos se denomia height.</p>
-                <table border="2">
+                <table>
                     <thead>
                         <tr>
                             <th>height</th>
@@ -124,18 +132,22 @@
                         </tr>
                     </tbody>
                 </table>
-                <p>Al igual que sucede con width, la propiedad height no admite valores negativos. Si se indica un porcentaje, se toma como referencia la altura del elemento padre. Si el elemento padre no tiene un altura definida explícitamente, se asigna el valor auto a la altura.</p>
-                <p>El valor inherit indica que la altura del elemento se hereda de su elemento padre. El valor auto, que es el que se utiliza si no se establece de forma explícita un valor a esta propiedad, indica que el navegador debe calcular automáticamente la altura del elemento, teniendo en cuenta sus contenidos y el sitio disponible en la página.</p>
+                <p>Al igual que sucede con width, la propiedad height no admite valores negativos. Si se indica un porcentaje, se toma como referencia la altura del elemento padre. Si el elemento padre no tiene un altura definida explícitamente, se asigna
+                    el valor auto a la altura.</p>
+                <p>El valor inherit indica que la altura del elemento se hereda de su elemento padre. El valor auto, que es el que se utiliza si no se establece de forma explícita un valor a esta propiedad, indica que el navegador debe calcular automáticamente
+                    la altura del elemento, teniendo en cuenta sus contenidos y el sitio disponible en la página.</p>
             </article>
             <article>
-                <header><h2>Margen y relleno.</h2></header>
+                <header>
+                    <h2>Margen y relleno.</h2>
+                </header>
                 <p><strong>Margen: </strong> CSS define cuatro propiedades para controlar cada uno de los márgenes horizontales y verticales.</p>
                 <table border="2">
                     <caption>Margen</caption>
                     <thead>
                         <tr>
                             <th>margin-top <br> margin-ringht <br> margin-bottom <br> margin-left</th>
-                            
+
                             <td>Margen superior <br> Margen derecho <br> Margen inferior <br> Margen izquierdo</td>
                         </tr>
                     </thead>
@@ -164,13 +176,398 @@
                 <a href="/ejemplo_con_margenes.html">Ejemplo con margenes.</a>
                 <p>Algunos diseñadores web utilizan la etiqueta &lt;blockquote&gt; para encerrar los contenidos de un párrafo que se quiere mostrar tabulado respecto al resto de contenido.</p>
                 <p>Los márgenes verticales (margin-top y margin-bottom) sólo se pueden aplicar a los elementos de bloque y las imágenes, mientras que los márgenes laterales (margin-left y margin-right) se puede aplicar a cualquier elemento.</p>
-                <p>Ademas de las cuatro propiedades que forman cada uno de los márgenes del elemento, CSS define un propiedad que permite establecer los cuatro márgenes de forma directa empleando una única propiedad. Este tipo de propiedades resumidas se denomina propiedades de tipo "shorthand" y CSS define varias propiedades de este tipo.</p>
+                <p>Ademas de las cuatro propiedades que forman cada uno de los márgenes del elemento, CSS define un propiedad que permite establecer los cuatro márgenes de forma directa empleando una única propiedad. Este tipo de propiedades resumidas se
+                    denomina propiedades de tipo "shorthand" y CSS define varias propiedades de este tipo.</p>
                 <p>La propiedad que permite definir de forma simultanea los cuatro márgenes se denomina <strong>margin.</strong></p>
                 <p>La propiedad margin admite entre uno y cuatro valores, con el siguiente significado.</p>
                 <p>Si solo se indica un valor, todos los márgenes tienen ese valor.</p>
                 <p>Si se indica dos valores, el primer valor se asigna a los margen superior e inferior y el segundo se asigna a los márgenes izquierdo y dercho.</p>
                 <p>Si se indica tres valores, el primero se asigna al margen superior, el tercero se asigna al margen inferior y el segundo valor se asigna a los márgenes izquierdo y derech.</p>
                 <p>Si se indica los cuatro valores, el orden de asignación es: margen supeior, margen derecho, margen inferior y margen izquierdo.</p>
+                <p>Código original.</p>
+                <pre>
+                    <code>
+                        div img{
+                            margin-top: .5em;
+                            margin-bottom: .5em;
+                            margin-left: 1em;
+                            margin-right: .5em;
+                        }
+                    </code>
+                </pre>
+                <p>Alternativa Directa</p>
+                <pre>
+                    <code>
+                        div img {
+                            margin: .5em .5em 1em .5em;
+                        }
+                    </code>
+                </pre>
+                <p>Otra alternativa</p>
+                <pre>
+                    <code>
+                        margin: .5em;
+                        margin-left: 1em;
+                    </code>
+                </pre>
+            </article>
+            <article>
+                <header>
+                    <h2>Relleno</h2>
+                </header>
+                <p>CSS define cuatro propiedades para controlar cada uno de los espacios de relleno horizontales y verticales de un elemento.</p>
+                <table border="2">
+                    <thead>
+                        <tr>
+                            <th>padding-top <br> padding-right <br>padding-bottom <br> padding-left</th>
+                            <td>Relleno superiro <br>Relleno derecho <br>Relleno inferior <br>Relleno isquierdo</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>&lt;medida&gt; | &lt;porcentaje&gt; | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a </th>
+                            <td>Todos los elementos excepto algunos elementos de tablas como <br>grupos de cabeceras y grupos de pie de tabla.</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece cada uno de los rellenos horizontales y verticales de un elemento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <figure>
+                    <figcaption><strong>Las cuastro propiedades relacionadas con los rellenos</strong></figcaption>
+                    <img src="/image/relleno.png" alt="propiedades de relleno">
+                </figure>
+                <figure>
+                    <figcaption><strong>Ejemplo de uso de relleno y margen</strong></figcaption>
+                    <img src="/image/ej_relleno.png" alt="Ejemplo de relleno y margen">
+                </figure>
+                <p>Como sucede con la propiedad de margin, CSS también define una propiedad de tipo "shorthand" para establecer los cuatro rellenos de un elemento de forma directa, dicha propiedad se denomina padding.</p>
+                <table border="2">
+                    <thead>
+                        <tr>
+                            <th>padding</th>
+                            <td>Relleno</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>(&lt;medida&gt; | &lt;porcentaje&gt;) {1, 4} | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a </th>
+                            <td>Todos los elementos excepto algunos elemento de tabla como grupos de cabeceras y grupos de pie de tablas</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inical</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece de forma directa todos los rellenos de los elemetos</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Ejemplo</p>
+                <pre>
+                    <code>
+                        body {padding: 2em;}  /*Todos los rellenos tiene un tamaño 2em*/
+                        body {padding: 1em 2em;} /* Superiro e inferior = 1em, izquierdo y derecho = 2em */
+                        body {padding: 1em 2em 3em;} /* superior=1em, derecho=2em, inferior=3em, izquierdo=2em */
+                        body {padding: 1em 2em 3em 4em;} /* superior=1em, derecho=2em, inferiro=3em, izquierdo=4em */
+                    </code>
+                </pre>
+                <p><a href="/ejemplos_rellenos.html">Ejemplos</a></p>
+            </article>
+            <article>
+                <header>
+                    <h2>Bordes</h2>
+                </header>
+                <p>CSS permite define el aspecto de cada uno de los cuatro bordes horizontales y verticales de los elementos. Para cada borde se puede definir un ancho, color y su estilo.</p>
+            </article>
+            <article>
+                <header>
+                    <h2>Anchura</h2>
+                </header>
+                <table border="2">
+                    <caption>La anchura de los bordes se controla con las cuatro propiedades siguientes:</caption>
+                    <thead>
+                        <tr>
+                            <th>border-top-width <br>border-right-width <br>border-bottom-width <br>border-left-width</th>
+                            <td>Anchura del borde superior <br>Anchura del borde derecho <br>Anchura del borde inferiro <br>Anchura del borde izquierdo</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>(&lt;media&gt; | thin | medium | thick) | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a</th>
+                            <td>todos los lementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inical</th>
+                            <td>Medium</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece la anchura de cada uno de los cuatro bordes de los <br>elementos</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>La anchura de los bordes se puede indicar mediante una medida (absoluta o relativa y en cualquier unidad de medida de las definidas) o mediante las palabras clabes thin (borde delgado), medium (borde normal) y thick (borde ancho).</p>
+                <p>La medida más abitual para indicar la anchura de los bordes es el píxel, ya que permite un control pereciso del grosor. La palabras claves a penas se utilizan ya que impide mostrar bordes iguales en diferentes navegadores.</p>
+                <p><a href="/ejemplo_bordes.html">Ejemplo</a></p>
+            </article>
+            <article>
+                <header>
+                    <h2>Color de los bordes</h2>
+                </header>
+                <table border="2">
+                    <caption>El color de los bordes se controla con las 4 propiedades:</caption>
+                    <thead>
+                        <th>border-top-color <br> border-right-color <br>border-bottom-color <br>border-left-color</th>
+                        <td>Color de borde superior <br>Color de borde derecho <br>Color de borde inferior <br>Color de borde izquierdo</td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>&lt;color&gt; | transparent | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a</th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece el color de cada uno de los cuatro bordes de los elementos</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Código de ejemplo.</p>
+                <pre>
+                    <code>
+                        div {
+                            border-top-color: #CC0000;
+                            border-right-color: blue;
+                            border-bottom-color: #00FF00;
+                            border-left-color: #CCC;
+                        } 
+                    </code>
+                </pre>
+                <p>Si se quier establecer el mismo color para todos los bordes, mediante una propiedad de tipo "shorthand" que permite indicar varias propiedades de forma resumida.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>border-color</th>
+                            <td>Color del borde</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>(&lt;color&gt; | transparent) {1, 4} | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a </th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece el color a todos los bordes del elemento</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><a href="/ejemplo_bordes_color.html">Ejemplo</a></p>
+            </article>
+            <article>
+                <header>
+                    <h2>Estilo de Bordes</h2>
+                </header>
+                <p>CSS permite establecer cada uno de los bordes mediante las siguientes propiedades:</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>border-top-style <br>border-right-style <br>border-bottom-style <br>border-left-style</th>
+                            <td>Estilo de borde superior <br>Estilo de borde derecho <br>Estilo de borde inferior <br>Estilo de borde izquierdo</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>none | hidden | dotted | dashed | solid <br> bouble | groove | inset | outset <br>inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a</th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>none</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece el estilo de cada uno de los cuatro bordes de los <br>elementos</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Código de ejemplo</p>
+                <pre>
+                    <code>
+                        div{
+                            border-top-style: dashed;
+                            border-right-style: double;
+                            border-bottom-style: dotted;
+                            border-left-style: solid;
+                        }
+                    </code>
+                </pre>
+                <p>Ejemplo visual</p>
+                <p style="text-align: center;">None</p>
+                <p id="c">Hidden</p>
+                <p id="c1">Dotted</p>
+                <p id="c2">Dashed</p>
+                <p id="c3">Solid</p>
+                <p id="c4">Doule</p>
+                <p id="c5">Groove</p>
+                <p id="c6">Ridge</p>
+                <p id="c7">Inset</p>
+                <p id="c8">Outser</p>
+                <p>Los estilos none y hidden son identicos visualmente, pero se diferencian en la forma que los navegadores resulven los conflictos entre los bordes de las celdas adyacentes en las tablas.</p>
+                <table>
+                    <caption>Propiedad de tipo shorthand</caption>
+                    <thead>
+                        <tr>
+                            <th>border-style</th>
+                            <td>Estilo del borde</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>(none | hidden | dotted | dashed | solid | bouble | <br> groove | ridge | inset | outset) {1, 4} | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a</th>
+                            <td>Todos los elemetos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece el estilo de todos los bordes del elemeto</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <header>
+                    <h2>Propiedades shorthand</h2>
+                </header>
+                <p>Como sucede con los márgenes y los rellenos, CSS define una serie de propiedades de tipo "shorthand" que permite establecer todas los atributos de los bordes de forma directa.</p>
+                <p>Antes de presentar las propiedades, es conveniente definir los tres siguientes tipos de valores.</p>
+                <p>&lt;Medida_borde&gt; = &lt;medida&gt; | thin | medium | thick</p>
+                <p>&lt;Color_borde&gt; = &lt;color&gt; | transparent</p>
+                <p>&lt;Estilo_borde&gt; = none | hidden | dotted | dashed | solid | double | groove | ridge | inset | outset</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>border-top <br>border-right <br>border-bottom <br>border-left</th>
+                            <td>Estilo completo del borde superior <br>Estilo completo del borde derecho <br>Estilo completo del borde inferior <br>Estilo completo del borde izquierdo</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>(&lt;medidas_borde&gt; || &lt;color_borde&gt; || &lt;estilo_borde&gt;) <br>| inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a </th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece el estilo completo de cada uno de los 4 bordes de los elementos</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Las propiedades "shorthand" permiten establecer algunos o todos los atributos de cada borde.</p>
+                <p>Ejmeplo del código</p>
+                <pre>
+                    <code>
+                        h1{
+                            border-bottom: solid red;        /*se define el estilo del borde y el color */
+                            border-right: double 1px red;    /*se define estilo el tamaño y el color*/
+                        }
+                    </code>
+                </pre>
+                <p>Pro ultimo, CSS define un apropiedea de tipo "shorthand" global para establecer el valor de los atributos de todos los bordes de forma directa.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>border</th>
+                            <td>Estilo completo de todos los bordes </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>(&lt;Medida_borde&gt; || &lt;color_borde&gt; || &lt;estilo_borde&gt;) <br>| inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a </th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece el estilo completo de todos los bordes de los elementos</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Código de ejemplo</p>
+                <pre>
+                    <code>
+                        /*Declaracion de regla estandar*/
+                        div{
+                            border-top: 1px solid red;
+                            border-right: 1px solid red;
+                            border-bottom: 1px solid red;
+                            borde-left: 1px solid red;
+                        }
+                        /*Regrla equivalente*/
+                        div{
+                            border: 1px solid red;
+                        }
+                    </code>
+                </pre>
             </article>
         </section>
     </main>
@@ -178,4 +575,5 @@
         <p>Todos los derechos reservados &copy; 2021</p>
     </footer>
 </body>
+
 </html>

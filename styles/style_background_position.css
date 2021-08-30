@@ -1,0 +1,26 @@
+#caja1 {
+    width: 40%;
+    padding: 5%;
+    border: black solid;
+    background-image: url("/image/color1.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+
+#caja2 {
+    width: 40%;
+    padding: 5%;
+    border: black solid;
+    background-image: url("/image/color1.jpg");
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+#caja3 {
+    width: 40%;
+    padding: 5%;
+    border: black solid;
+    background-image: url("/image/color1.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% center;
+}

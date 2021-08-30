@@ -1,0 +1,25 @@
+#parrafo1 {
+    /*Definimos el ancho de la linea o borde*/
+    border: solid;
+    border-top-width: 2em;
+    border-right-width: 1em;
+    border-bottom-width: 2.5em;
+    border-left-width: 1.5em;
+    /*Se define el color del borde*/
+    border-top-color: violet;
+    border-right-color: yellowgreen;
+    border-bottom-color: tomato;
+    border-left-color: yellow;
+}
+
+#parrafo2 {
+    border: solid;
+    border-width: 1em;
+    border-color: violet;
+}
+
+#parrafo3 {
+    border: solid;
+    border-width: 1.5em;
+    border-color: yellow violet;
+}

@@ -1,0 +1,84 @@
+/*Estilo para la pagina modelo_de_caja*/
+
+table {
+    border: solid;
+    border-color: darkslateblue;
+}
+
+
+/*todo los bordes de la tabla tendran unformato siguiente*/
+
+table * {
+    border: solid;
+    border-color: black;
+    text-align: left;
+    padding: 10px;
+    border-width: 1px;
+}
+
+table caption {
+    border: none;
+    text-align: center;
+}
+
+
+/*defenimos estilos para la etiqueta codigo*/
+
+code {
+    font-size: 15px;
+}
+
+
+/*Estilos de bordes*/
+
+#c {
+    border: hidden;
+    text-align: center;
+}
+
+#c1 {
+    border: dotted;
+    text-align: center;
+}
+
+#c2 {
+    border: dashed;
+    text-align: center;
+    border-width: 10px;
+}
+
+#c3 {
+    border: solid;
+    text-align: center;
+    border-width: 10px;
+}
+
+#c4 {
+    border: double;
+    text-align: center;
+    border-width: 10px;
+}
+
+#c5 {
+    border: groove;
+    text-align: center;
+    border-width: 10px;
+}
+
+#c6 {
+    border: ridge;
+    text-align: center;
+    border-width: 10px;
+}
+
+#c7 {
+    border: inset;
+    text-align: center;
+    border-width: 10px;
+}
+
+#c8 {
+    border: outset;
+    text-align: center;
+    border-width: 10px;
+}

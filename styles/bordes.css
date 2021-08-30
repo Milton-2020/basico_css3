@@ -1,0 +1,23 @@
+#parrafo1 {
+    border: yellowgreen solid;
+    padding: 2em;
+}
+
+#parrafo2 {
+    border: violet solid;
+    border-width: thick;
+    padding-top: 3em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    padding-left: 4em;
+}
+
+#parrafo3 {
+    border: black solid;
+    padding: 5em 3em;
+}
+
+#parrafo4 {
+    border: darkblue solid;
+    padding: 2em 4em 5em;
+}
