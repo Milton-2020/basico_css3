@@ -257,6 +257,80 @@
                 <p>Las palabras claves permitidas son equivalentes a algunos porcentajes significativos: top = 0%, left = 0%, center = 50% bottom = 100%, right = 100%.</p>
                 <p>CSS permite mezclar porcentajes y palabras claves, como por ejemplo 50% 2cm, center 2cm, center 10%.</p>
                 <a href="/ejemplo_background_position.html">Ejemplos</a>
+                <p>Código de ejemplo.</p>
+                <pre>
+                    <code>
+                        #caja1 {
+                            background-image: url("/imagen/ds.png");
+                            background-repeat: no-repeat;
+                            background-position: bottom left;
+                        }
+                    </code>
+                </pre>
+                <p>Opcionalmente, se puede indicar que el fondo permanezca fijo cuando la ventana del navegador se desplaza mediante las barras de scroll. Se trata de un comportamiento que en general no es desable y que algunos navegadores no soportan correctamente. La propiedad que controla este comportamiento es <strong>background-attachment</strong>.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>background-attachment</th>
+                            <td>Comportamiento de la imagen de fondo</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>scroll | fixed | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a</th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>scroll</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Controla la forma en la que se visualiza la imagen de <br>fondo: permanece fija cuando se hace scroll en la ventana <br>del navegador o se desplaza junto con la ventana</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Para hacer que una imagen de fondo se muestre fija al desplazar la ventana del navegador, se debe añadir la propiedad <strong>background-attachment: fixed</strong></p>
+                <p>Por último, CSS define una propiedad de tipo "shorthand" par indicar todas las propiedades de los colores e imagenes de fondo de forma directa. La propiedad se denomina <strong>background </strong>y es la que generalmente se utiliza para establecer las propiedades del fondo de los elementos.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>background</th>
+                            <td>Fondo de un elemento</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>(&lt; background-color&gt; || &lt;background-image&gt; ||<br> &lt;background-repeat&gt; || &lt;background-attachment&gt; ||<br> &lt;background-position&gt;) | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a</th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece todos las propiedades del fondo de un elemento</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>El orden en el que se indican las propiedades es indiferente, aunque en general se sigue el formato indicado de color, url de imagen, reprición y posición.</p>
+                <p>Código de ejemplo.</p>
+                <pre>
+                    <code>
+                        body {
+                            background: #293838 url("/imagen/ds.png") no-repeat center left;
+                        }
+                    </code>
+                </pre>
             </article>
             <article>
                 <header>
