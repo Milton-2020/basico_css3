@@ -219,7 +219,12 @@
                         }
                     </code>
                 </pre>
-                <p>Ademas de seleccionar el tipo de repetición de la imágenes de fondo, CSS permite controlar la posición de la imagen dentro del fondo del elemento mediante la propiedad <strong>bacground-position</strong></p>
+            </article>
+            <article>
+                <header>
+                    <h2>background-position</h2>
+                </header>
+                <p>Ademas de seleccionar el tipo de repetición de la imágenes de fondo, CSS permite controlar la posición de la imagen dentro del fondo del elemento mediante la propiedad <strong>background-position</strong></p>
                 <table>
                     <thead>
                         <tr>
@@ -252,6 +257,77 @@
                 <p>Las palabras claves permitidas son equivalentes a algunos porcentajes significativos: top = 0%, left = 0%, center = 50% bottom = 100%, right = 100%.</p>
                 <p>CSS permite mezclar porcentajes y palabras claves, como por ejemplo 50% 2cm, center 2cm, center 10%.</p>
                 <a href="/ejemplo_background_position.html">Ejemplos</a>
+            </article>
+            <article>
+                <header>
+                    <h2>background-attachment</h2>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>background-attachment</th>
+                            <td>Comportamiento de la imagen de fondo</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>scroll | fixed | inherit</td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a </th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>scroll</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>
+                                Controla la forma en la que se visualiza la imagen de <br> fondo: permanece fija cuando se hace scrill en la ventana <br>del navegador o se desplaza junto con la ventana.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Para que una imagen de fondon se muestre fija al desplazar la ventana del navegador, se deve añadir la propiedad <strong>background-attachment: fixed</strong></p>
+            </article>
+            <article>
+                <header>
+                    <h2>background</h2>
+                </header>
+                <p>
+                    Por último, CSS define una propiedad de tipo "shorthand" par indicar todas las propiedades de los colores e imágenes de fondo de forma directa.
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>background</th>
+                            <td>Fondo de un elemento.</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Valores</th>
+                            <td>
+                                (&lt;background-color&gt; || &lt;background-image&gt; ||<br> &lt;background-repeat&gt; || &lt;background-attachment&gt; || <br> &lt;background-position&gt;) | inherit
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Se aplica a</th>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <th>Valor inicial</th>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <th>Descripción</th>
+                            <td>Establece todas las propiedades del fondo de un elemento</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>El orden en el que se indican las propiedades es indiferente, aunque en general se sigue el formato indicado de color, url de imagen, repetición y posición</p>
             </article>
         </section>
     </main>
